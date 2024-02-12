@@ -1,0 +1,157 @@
+{
+    "env": {
+        "es2022": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "prettier",
+        "import-helpers",
+        "unused-imports"
+    ],
+    "rules": {
+        "unused-imports/no-unused-imports": "error",
+        "@typescript-eslint/naming-convention": [
+            "error",
+            {
+                "selector": "interface",
+                "format": [
+                    "PascalCase"
+                ],
+                "custom": {
+                    "regex": "^I[A-Z]",
+                    "match": true
+                }
+            }
+        ],
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": [
+            "error"
+        ],
+        "no-console": "error",
+        "consistent-return": "off",
+        "no-use-before-define": [
+            "error",
+            {
+                "functions": false
+            }
+        ],
+        "prettier/prettier": [
+            "error"
+        ],
+        "arrow-body-style": "off",
+        "function-paren-newline": "off",
+        "complexity": [
+            "warn",
+            8
+        ],
+        "max-statements": [
+            "warn",
+            {
+                "max": 15
+            }
+        ],
+        "max-statements-per-line": [
+            "warn",
+            {
+                "max": 1
+            }
+        ],
+        "max-nested-callbacks": [
+            "warn",
+            {
+                "max": 2
+            }
+        ],
+        "max-depth": [
+            "warn",
+            {
+                "max": 2
+            }
+        ],
+        "max-params": [
+            "warn",
+            5
+        ],
+        "max-len": [
+            "warn",
+            100,
+            {
+                "ignoreUrls": true,
+                "ignoreComments": true,
+                "ignoreStrings": true
+            }
+        ],
+        "no-param-reassign": [
+            "warn",
+            {
+                "props": true,
+                "ignorePropertyModificationsFor": [
+                    "acc",
+                    "accumulator",
+                    "item",
+                    "e",
+                    "module",
+                    "req",
+                    "request",
+                    "res",
+                    "response",
+                    "session"
+                ]
+            }
+        ],
+        "@typescript-eslint/no-empty-interface": "off",
+        "import/prefer-default-export": "off",
+        "no-useless-constructor": "off",
+        "class-methods-use-this": "off",
+        "import-helpers/order-imports": [
+            "warn",
+            {
+                "newlinesBetween": "always",
+                "groups": [
+                    "module",
+                    [
+                        "parent",
+                        "sibling",
+                        "index"
+                    ]
+                ],
+                "alphabetize": {
+                    "order": "asc",
+                    "ignoreCase": true
+                }
+            }
+        ],
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ]
+    },
+    "settings": {
+        "import/resolver": {
+            "typescript": {}
+        }
+    }
+}

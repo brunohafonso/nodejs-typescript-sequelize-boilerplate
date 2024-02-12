@@ -1,0 +1,4 @@
+node_modules
+commitling.config.js
+*.config.js
+jest.setup.ts
